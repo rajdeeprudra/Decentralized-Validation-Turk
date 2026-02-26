@@ -1,10 +1,11 @@
 import { Router } from "express";
 import jwt from "jsonwebtoken";
 import { PrismaClient } from "@prisma/client";
+import { prisma } from "../prisma.js";
 import "dotenv/config";
 
 const router = Router();
-const prismaClient = new PrismaClient();
+
 
 const JWT_SECRET = process.env.JWT_SECRET || "abcdefg";
 
